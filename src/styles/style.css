@@ -1,0 +1,470 @@
+/* Reset stylów */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #2b2d42, #343541);
+  color: #e3e3e3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  transition: background 0.5s ease-in-out;
+}
+
+/* Kontener główny */
+.container {
+  width: 90%;
+  max-width: 700px;
+  background: linear-gradient(145deg, #40414f, #3a3b49);
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  animation: fadeIn 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  position: relative; /* Dodano, aby awatar był pozycjonowany względem kontenera */
+}
+
+.container:hover {
+  transform: scale(1.02);
+}
+
+/* Nagłówek */
+.title {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-shadow: 0px 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+/* Karty sekcji */
+.form-card,
+.summary-card,
+.history-card {
+  background: linear-gradient(135deg, #50515f, #57586b);
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  animation: slideIn 0.5s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+}
+
+.form-card:hover,
+.summary-card:hover,
+.history-card:hover {
+  transform: scale(1.03);
+}
+
+h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* Pola input i select */
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 6px;
+  background: #60616f;
+  color: white;
+  transition: all 0.3s ease-in-out;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+input:focus,
+select:focus {
+  background: #70718b;
+  outline: none;
+  transform: scale(1.02);
+}
+
+/* Przyciski */
+.btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: linear-gradient(135deg, #4a4a57, #5a5a6b);
+  border: none;
+  color: white;
+  font-size: 17px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #5a5a6b, #6a6a7b);
+  transform: scale(1.05);
+}
+
+/* Przyciski ostrzegawcze */
+.btn.danger {
+  background: linear-gradient(135deg, #a83232, #c94646);
+}
+
+.btn.danger:hover {
+  background: linear-gradient(135deg, #c94646, #e95656);
+}
+
+/* Lista transakcji */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.history-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #60616f, #68697f);
+  padding: 12px;
+  margin-top: 5px;
+  border-radius: 8px;
+  animation: fadeIn 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+}
+
+.history-item:hover {
+  transform: scale(1.02);
+}
+
+.delete-btn {
+  background: linear-gradient(135deg, #a83232, #c94646);
+  border: none;
+  color: white;
+  font-size: 8px;
+  font-weight: bold;
+  padding: 2px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(255, 0, 0, 0.3),
+    inset 0 -3px 6px rgba(0, 0, 0, 0.4);
+  transition: all 0.2s ease-in-out;
+  margin-left: auto; /* Ustawienie przycisku po prawej stronie */
+}
+
+/* Efekt wciśnięcia przycisku */
+.delete-btn:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 4px rgba(255, 0, 0, 0.3), inset 0 3px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Efekt hover */
+.delete-btn:hover {
+  background: linear-gradient(135deg, #c94646, #e95656);
+  box-shadow: 0 5px 10px rgba(255, 0, 0, 0.5),
+    inset 0 -3px 6px rgba(0, 0, 0, 0.4);
+}
+
+.avatar {
+  position: absolute;
+  top: 10px; /* Zmniejszono, aby lepiej pasował do kontenera */
+  right: 10px; /* Zmniejszono, aby lepiej pasował do kontenera */
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #60616f, #68697f);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.avatar:hover {
+  transform: scale(1.1);
+}
+
+/* Styl dla kontenera profilu */
+.profile-card {
+  background: linear-gradient(135deg, #50515f, #57586b);
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  animation: slideIn 0.5s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  width: 100%;
+}
+
+.profile-card:hover {
+  transform: scale(1.03);
+}
+
+/* Przyciski w formularzu profilu */
+.profile-btn {
+  width: 48%;
+  margin: 5px 1%;
+  display: inline-block;
+}
+
+/* Animacje */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 3390px) {
+  .container {
+    max-width: 1200px;
+    padding: 40px;
+  }
+
+  .form-card,
+  .summary-card,
+  .history-card {
+    padding: 30px;
+  }
+
+  .btn {
+    font-size: 20px;
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+}
+
+/* Stylizacja listy historii transakcji */
+.history-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.history-item {
+  display: flex;
+  flex-wrap: wrap; /* Pozwala na zawijanie elementów, jeśli nie mieszczą się w linii */
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #60616f, #68697f);
+  padding: 12px;
+  margin-top: 5px;
+  border-radius: 8px;
+  animation: fadeIn 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  gap: 10px; /* Automatyczny odstęp między elementami */
+}
+
+/* Stylizacja elementów wewnątrz */
+.history-item span {
+  flex: 1; /* Pozwala każdemu elementowi na równomierne rozmieszczenie */
+  min-width: 100px; /* Zapobiega nadmiernemu zawężeniu na mniejszych ekranach */
+  text-align: center;
+  white-space: nowrap; /* Zapobiega łamaniu pojedynczych wartości */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Kolory dla różnych wartości */
+.date {
+  color: white;
+  font-weight: bold;
+}
+
+.investment-name {
+  color: yellow;
+  font-weight: bold;
+}
+
+.amount {
+  color: lightblue;
+  font-weight: bold;
+}
+
+.price {
+  color: orange;
+  font-weight: bold;
+}
+
+/* Przycisk usuwania transakcji */
+.delete-btn {
+  background: linear-gradient(135deg, #a83232, #c94646);
+  border: none;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(255, 0, 0, 0.3),
+    inset 0 -3px 6px rgba(0, 0, 0, 0.4);
+  transition: all 0.2s ease-in-out;
+  margin-left: auto;
+}
+
+.delete-btn:hover {
+  background: linear-gradient(135deg, #c94646, #e95656);
+  box-shadow: 0 5px 10px rgba(255, 0, 0, 0.5),
+    inset 0 -3px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsywność dla małych ekranów */
+@media (max-width: 600px) {
+  .history-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 5px;
+  }
+
+  .history-item span {
+    min-width: auto;
+    width: 100%;
+  }
+
+  .delete-btn {
+    width: 100%;
+    max-width: 120px;
+    margin-left: 0;
+  }
+}
+
+input.error,
+select.error {
+  background: rgba(255, 0, 0, 0.2); /* Delikatne czerwone tło */
+  border: 1px solid #ff0000; /* Czerwona obwódka */
+  color: white;
+  transition: background 0.3s ease-in-out;
+}
+
+input.error:focus,
+select.error:focus {
+  background: rgba(255, 0, 0, 0.3); /* Trochę ciemniejsze przy fokusie */
+  transform: scale(1.02);
+}
+
+/* Styl dla komunikatów błędów */
+.error-message {
+  color: #ff4d4d;
+  font-size: 14px;
+  margin-top: 5px;
+  text-align: center;
+}
+/* Dodaj na końcu pliku style.css */
+
+/* Styl dla zakładek */
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tab-btn {
+  width: 50%;
+  padding: 10px;
+  background: linear-gradient(135deg, #4a4a57, #5a5a6b);
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.tab-btn.active {
+  background: linear-gradient(135deg, #60616f, #68697f);
+}
+
+.tab-btn:hover {
+  background: linear-gradient(135deg, #5a5a6b, #6a6a7b);
+}
+
+/* Poprawka dla kontenera, aby nie kurczył się */
+.container {
+  width: 90%;
+  max-width: 700px;
+  min-width: 500px; /* Minimalna szerokość, aby zapobiec kurczeniu */
+  background: linear-gradient(145deg, #40414f, #3a3b49);
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  animation: fadeIn 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.user-name {
+  font-size: 16px;
+  color: bisque;
+  font-weight: bold;
+}
+
+.success-message {
+  color: green;
+  margin-top: 10px;
+}
+
+.error-message {
+  color: red;
+  margin-top: 5px;
+}
+.browse-btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.browse-btn:hover {
+  background-color: #0056b3;
+}
