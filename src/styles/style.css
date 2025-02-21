@@ -13,21 +13,20 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  padding: 20px;
-  transition: background 0.5s ease-in-out;
+  padding: 10px; /* Zmniejszone padding, aby lepiej pasować na małych ekranach */
 }
 
 /* Kontener główny */
 .container {
-  width: 90%;
-  max-width: 700px;
+  width: 100%; /* Pełna szerokość na małych ekranach */
+  max-width: 100%; /* Usunięto ograniczenie max-width, aby kontener nie wystawał poza ekran */
   background: linear-gradient(145deg, #40414f, #3a3b49);
   border-radius: 12px;
-  padding: 25px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  padding: 15px; /* Zmniejszone padding dla mniejszych ekranów */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
   animation: fadeIn 0.5s ease-in-out;
   transition: all 0.3s ease-in-out;
-  position: relative; /* Dodano, aby awatar był pozycjonowany względem kontenera */
+  position: relative;
 }
 
 .container:hover {
@@ -37,10 +36,10 @@ body {
 /* Nagłówek */
 .title {
   text-align: center;
-  font-size: 26px;
-  margin-bottom: 20px;
+  font-size: 22px; /* Zmniejszone dla mniejszych ekranów */
+  margin-bottom: 15px;
   color: #ffffff;
-  text-shadow: 0px 2px 4px rgba(255, 255, 255, 0.1);
+  text-shadow: 0px 1px 2px rgba(255, 255, 255, 0.1);
 }
 
 /* Karty sekcji */
@@ -48,10 +47,10 @@ body {
 .summary-card,
 .history-card {
   background: linear-gradient(135deg, #50515f, #57586b);
-  padding: 20px;
-  margin-bottom: 15px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  padding: 15px; /* Zmniejszone padding */
+  margin-bottom: 10px;
+  border-radius: 8px; /* Mniejszy radius dla mobilnych */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   animation: slideIn 0.5s ease-in-out;
   transition: transform 0.3s ease-in-out;
 }
@@ -59,12 +58,12 @@ body {
 .form-card:hover,
 .summary-card:hover,
 .history-card:hover {
-  transform: scale(1.03);
+  transform: scale(1.02); /* Mniejszy skalowanie na małych ekranach */
 }
 
 h2 {
-  font-size: 22px;
-  margin-bottom: 10px;
+  font-size: 18px; /* Zmniejszone dla mniejszych ekranów */
+  margin-bottom: 8px;
   text-align: center;
   color: #ffffff;
 }
@@ -73,41 +72,41 @@ h2 {
 input,
 select {
   width: 100%;
-  padding: 12px;
-  margin: 8px 0;
+  padding: 10px; /* Zmniejszone padding */
+  margin: 6px 0;
   border: none;
-  border-radius: 6px;
+  border-radius: 4px; /* Mniejszy radius */
   background: #60616f;
   color: white;
   transition: all 0.3s ease-in-out;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 input:focus,
 select:focus {
   background: #70718b;
   outline: none;
-  transform: scale(1.02);
+  transform: scale(1.01); /* Mniejszy efekt skalowania */
 }
 
 /* Przyciski */
 .btn {
   width: 100%;
-  padding: 12px;
-  margin-top: 10px;
+  padding: 10px; /* Zmniejszone padding */
+  margin-top: 8px;
   background: linear-gradient(135deg, #4a4a57, #5a5a6b);
   border: none;
   color: white;
-  font-size: 17px;
+  font-size: 14px; /* Zmniejszone dla mniejszych ekranów */
   cursor: pointer;
-  border-radius: 6px;
+  border-radius: 4px; /* Mniejszy radius */
   transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 .btn:hover {
   background: linear-gradient(135deg, #5a5a6b, #6a6a7b);
-  transform: scale(1.05);
+  transform: scale(1.03); /* Mniejszy efekt skalowania */
 }
 
 /* Przyciski ostrzegawcze */
@@ -127,85 +126,86 @@ ul {
 
 .history-item {
   display: flex;
-  align-items: center;
+  flex-direction: column; /* Ustawienie w kolumnie na małych ekranach */
+  align-items: flex-start; /* Wyrównanie do lewej */
   justify-content: space-between;
   background: linear-gradient(135deg, #60616f, #68697f);
-  padding: 12px;
+  padding: 10px; /* Zmniejszone padding */
   margin-top: 5px;
-  border-radius: 8px;
+  border-radius: 6px; /* Mniejszy radius */
   animation: fadeIn 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out;
+  gap: 5px; /* Mniejszy odstęp między elementami */
 }
 
 .history-item:hover {
-  transform: scale(1.02);
+  transform: scale(1.01); /* Mniejszy efekt skalowania */
 }
 
+/* Przycisk usuwania */
 .delete-btn {
   background: linear-gradient(135deg, #a83232, #c94646);
   border: none;
   color: white;
-  font-size: 8px;
+  font-size: 10px; /* Zmniejszone dla mniejszych ekranów */
   font-weight: bold;
-  padding: 2px 8px;
-  border-radius: 8px;
+  padding: 2px 6px; /* Zmniejszone padding */
+  border-radius: 6px; /* Mniejszy radius */
   cursor: pointer;
-  box-shadow: 0 4px 8px rgba(255, 0, 0, 0.3),
-    inset 0 -3px 6px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 4px rgba(255, 0, 0, 0.3),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.4);
   transition: all 0.2s ease-in-out;
-  margin-left: auto; /* Ustawienie przycisku po prawej stronie */
+  margin-left: auto; /* Utrzymanie przycisku po prawej, ale na małych ekranach może być na dole */
 }
 
-/* Efekt wciśnięcia przycisku */
-.delete-btn:active {
-  transform: scale(0.95);
-  box-shadow: 0 2px 4px rgba(255, 0, 0, 0.3), inset 0 3px 6px rgba(0, 0, 0, 0.5);
-}
-
-/* Efekt hover */
 .delete-btn:hover {
   background: linear-gradient(135deg, #c94646, #e95656);
-  box-shadow: 0 5px 10px rgba(255, 0, 0, 0.5),
-    inset 0 -3px 6px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 3px 6px rgba(255, 0, 0, 0.5),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.4);
 }
 
+.delete-btn:active {
+  transform: scale(0.95);
+}
+
+/* Awatar */
 .avatar {
   position: absolute;
-  top: 10px; /* Zmniejszono, aby lepiej pasował do kontenera */
-  right: 10px; /* Zmniejszono, aby lepiej pasował do kontenera */
-  width: 40px;
-  height: 40px;
+  top: 10px;
+  right: 10px;
+  width: 30px; /* Zmniejszone dla mniejszych ekranów */
+  height: 30px; /* Zmniejszone dla mniejszych ekranów */
   background: linear-gradient(135deg, #60616f, #68697f);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
-  font-size: 18px;
+  font-size: 14px; /* Zmniejszone dla mniejszych ekranów */
   font-weight: bold;
   cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease-in-out;
 }
 
 .avatar:hover {
-  transform: scale(1.1);
+  transform: scale(1.05); /* Mniejszy efekt skalowania */
 }
 
 /* Styl dla kontenera profilu */
 .profile-card {
   background: linear-gradient(135deg, #50515f, #57586b);
-  padding: 20px;
-  margin-bottom: 15px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  padding: 15px; /* Zmniejszone padding */
+  margin-bottom: 10px;
+  border-radius: 8px; /* Mniejszy radius */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   animation: slideIn 0.5s ease-in-out;
   transition: transform 0.3s ease-in-out;
   width: 100%;
 }
 
 .profile-card:hover {
-  transform: scale(1.03);
+  transform: scale(1.02); /* Mniejszy efekt skalowania */
 }
 
 /* Przyciski w formularzu profilu */
@@ -236,36 +236,113 @@ ul {
   }
 }
 
-/* Responsywność */
-@media (max-width: 768px) {
+/* Responsywność dla małych ekranów (np. iPhone 12 Pro Max, 390px) */
+@media (max-width: 390px) {
   .container {
-    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
   }
 
-  h2 {
+  .title {
     font-size: 18px;
-  }
-}
-
-@media (min-width: 3390px) {
-  .container {
-    max-width: 1200px;
-    padding: 40px;
+    margin-bottom: 10px;
   }
 
   .form-card,
   .summary-card,
   .history-card {
-    padding: 30px;
-  }
-
-  .btn {
-    font-size: 20px;
-    padding: 15px;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 6px;
   }
 
   h2 {
-    font-size: 26px;
+    font-size: 16px;
+  }
+
+  input,
+  select {
+    padding: 8px;
+    margin: 4px 0;
+    border-radius: 4px;
+  }
+
+  .btn {
+    padding: 8px;
+    font-size: 12px;
+    margin-top: 6px;
+    border-radius: 4px;
+  }
+
+  .history-item {
+    padding: 8px;
+    border-radius: 4px;
+    gap: 3px;
+  }
+
+  .delete-btn {
+    font-size: 8px;
+    padding: 2px 5px;
+    border-radius: 4px;
+  }
+
+  .avatar {
+    width: 25px;
+    height: 25px;
+    font-size: 12px;
+  }
+}
+
+/* Responsywność dla większych ekranów (tablety i desktop) */
+@media (min-width: 768px) {
+  .container {
+    width: 90%;
+    max-width: 700px;
+  }
+
+  .form-card,
+  .summary-card,
+  .history-card {
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  input,
+  select {
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 6px;
+  }
+
+  .btn {
+    padding: 12px;
+    font-size: 17px;
+    margin-top: 10px;
+    border-radius: 6px;
+  }
+
+  .history-item {
+    flex-direction: row; /* Powrót do poziomego układu na większych ekranach */
+    padding: 12px;
+    border-radius: 8px;
+    gap: 10px;
+  }
+
+  .delete-btn {
+    font-size: 12px;
+    padding: 2px 8px;
+    border-radius: 8px;
+  }
+
+  .avatar {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
   }
 }
 
@@ -275,31 +352,15 @@ ul {
   padding: 0;
 }
 
-.history-item {
-  display: flex;
-  flex-wrap: wrap; /* Pozwala na zawijanie elementów, jeśli nie mieszczą się w linii */
-  align-items: center;
-  justify-content: space-between;
-  background: linear-gradient(135deg, #60616f, #68697f);
-  padding: 12px;
-  margin-top: 5px;
-  border-radius: 8px;
-  animation: fadeIn 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out;
-  gap: 10px; /* Automatyczny odstęp między elementami */
-}
-
-/* Stylizacja elementów wewnątrz */
 .history-item span {
-  flex: 1; /* Pozwala każdemu elementowi na równomierne rozmieszczenie */
-  min-width: 100px; /* Zapobiega nadmiernemu zawężeniu na mniejszych ekranach */
-  text-align: center;
-  white-space: nowrap; /* Zapobiega łamaniu pojedynczych wartości */
+  flex: 1;
+  min-width: 80px; /* Mniejsza minimalna szerokość na małych ekranach */
+  text-align: left;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-/* Kolory dla różnych wartości */
 .date {
   color: white;
   font-weight: bold;
@@ -320,86 +381,42 @@ ul {
   font-weight: bold;
 }
 
-/* Przycisk usuwania transakcji */
-.delete-btn {
-  background: linear-gradient(135deg, #a83232, #c94646);
-  border: none;
-  color: white;
-  font-size: 12px;
-  font-weight: bold;
-  padding: 2px 8px;
-  border-radius: 8px;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(255, 0, 0, 0.3),
-    inset 0 -3px 6px rgba(0, 0, 0, 0.4);
-  transition: all 0.2s ease-in-out;
-  margin-left: auto;
-}
-
-.delete-btn:hover {
-  background: linear-gradient(135deg, #c94646, #e95656);
-  box-shadow: 0 5px 10px rgba(255, 0, 0, 0.5),
-    inset 0 -3px 6px rgba(0, 0, 0, 0.4);
-}
-
-/* Responsywność dla małych ekranów */
-@media (max-width: 600px) {
-  .history-item {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 5px;
-  }
-
-  .history-item span {
-    min-width: auto;
-    width: 100%;
-  }
-
-  .delete-btn {
-    width: 100%;
-    max-width: 120px;
-    margin-left: 0;
-  }
-}
-
+/* Styl dla błędów */
 input.error,
 select.error {
-  background: rgba(255, 0, 0, 0.2); /* Delikatne czerwone tło */
-  border: 1px solid #ff0000; /* Czerwona obwódka */
+  background: rgba(255, 0, 0, 0.2);
+  border: 1px solid #ff0000;
   color: white;
   transition: background 0.3s ease-in-out;
 }
 
 input.error:focus,
 select.error:focus {
-  background: rgba(255, 0, 0, 0.3); /* Trochę ciemniejsze przy fokusie */
-  transform: scale(1.02);
+  background: rgba(255, 0, 0, 0.3);
+  transform: scale(1.01);
 }
 
-/* Styl dla komunikatów błędów */
 .error-message {
   color: #ff4d4d;
-  font-size: 14px;
+  font-size: 12px; /* Zmniejszone dla mniejszych ekranów */
   margin-top: 5px;
   text-align: center;
 }
-/* Dodaj na końcu pliku style.css */
 
 /* Styl dla zakładek */
 .tabs {
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .tab-btn {
   width: 50%;
-  padding: 10px;
+  padding: 8px; /* Zmniejszone padding */
   background: linear-gradient(135deg, #4a4a57, #5a5a6b);
   border: none;
   color: white;
-  font-size: 16px;
+  font-size: 14px; /* Zmniejszone dla mniejszych ekranów */
   cursor: pointer;
   transition: background 0.3s ease-in-out;
 }
@@ -412,55 +429,44 @@ select.error:focus {
   background: linear-gradient(135deg, #5a5a6b, #6a6a7b);
 }
 
-/* Poprawka dla kontenera, aby nie kurczył się */
-.container {
-  width: 90%;
-  max-width: 700px;
-  min-width: 500px; /* Minimalna szerokość, aby zapobiec kurczeniu */
-  background: linear-gradient(145deg, #40414f, #3a3b49);
-  border-radius: 12px;
-  padding: 25px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
-  animation: fadeIn 0.5s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  position: relative;
-}
+/* Awatar i inne elementy */
 .avatar {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   background-color: #ccc;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
+  font-size: 14px;
   cursor: pointer;
   overflow: hidden;
 }
 
 .user-name {
-  font-size: 16px;
+  font-size: 14px; /* Zmniejszone dla mniejszych ekranów */
   color: bisque;
   font-weight: bold;
 }
 
 .success-message {
   color: green;
-  margin-top: 10px;
+  margin-top: 8px;
 }
 
 .error-message {
   color: red;
   margin-top: 5px;
 }
+
 .browse-btn {
   display: inline-block;
-  padding: 8px 16px;
+  padding: 6px 12px; /* Zmniejszone padding */
   background-color: #007bff;
   color: white;
   border: none;
   border-radius: 4px;
-  font-size: 14px;
+  font-size: 12px; /* Zmniejszone dla mniejszych ekranów */
   cursor: pointer;
   transition: background-color 0.3s;
 }
