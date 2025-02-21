@@ -1,70 +1,82 @@
-# Getting Started with Create React App
+# 💰 InvestmentTracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+InvestmentTracker is a web application that allows users to track their investments and manage their financial portfolio. Users can register, log in, add investments, monitor transaction history, and update their profiles.
 
-## Available Scripts
+## 📷 **Application Preview**
 
-In the project directory, you can run:
+Screenshots showcasing the application are available in the `preview` folder.
 
-### `npm start`
+🔗 **Live Demo**:
+[InvestmentTracker on GitHub Pages](https://andrewdul.github.io/InvestmentTracker/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🚀 **Features**
 
-### `npm test`
+- 🔐 **User Authentication** – register, log in, and manage your account.
+- 📊 **Add Investments** – users can add new transactions with the investment amount, name, and fees.
+- 📜 **Transaction History** – view a list of all recorded investments.
+- 🛠 **Profile Management** – update user profile and change password.
+- 📈 **Investment Summary** – see aggregated investment data.
+- ❌ **Delete Transactions** – remove any transaction from the list.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🔑 **How to Use the Application?**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 📝 **Registration**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Click on the **"Registration"** tab.
+2. Enter your email and password.
+3. Click **"Register"** – your account will be created.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 🔐 **Login**
 
-### `npm run eject`
+1. Go to the **"Login"** tab.
+2. Enter your email and password.
+3. Click **"Login"** – after successful login, you will see your profile and investment dashboard.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### ➕ **Adding a New Investment**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. In the **"Add Transaction"** section, enter:
+   - **Investment Name** (e.g., BTC, Apple, Tesla).
+   - **Investment Amount**.
+   - **Transaction Fee**.
+2. Click **"Add Transaction"** – the investment will be added to the history.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 🔄 **Updating Your Profile**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Navigate to the **"Profile"** section.
+2. Edit your user information.
+3. Click **"Save Changes"** to update your profile.
 
-## Learn More
+### 🔑 **Changing Your Password**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Go to the **"Change Password"** section.
+2. Enter your current password and a new password.
+3. Click **"Change Password"** – your password will be updated.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### ❌ **Deleting a Transaction**
 
-### Code Splitting
+1. In the **"Transaction History"** section, find the transaction you want to remove.
+2. Click the red **"X"** button – the transaction will be deleted.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## ⚙️ **Technologies Used**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- **Frontend**: React.js
+- **Backend**: Firebase Authentication & Firestore
+- **Styling**: CSS (dark theme)
+- **Hosting**: GitHub Pages
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 📧 **Contact**
 
-### Advanced Configuration
+If you have any questions or suggestions for improving the application, feel free to open an **Issue** on GitHub.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+📍 **Author**: Andrew Dul  
+🚀 **Repository**: [InvestmentTracker Repo](https://github.com/AndrewDul/InvestmentTracker)
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
