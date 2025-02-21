@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/InvestmentTracker/static/css/main.5656259d.css",
+    "main.css": "/InvestmentTracker/static/css/main.cb869c87.css",
     "main.js": "/InvestmentTracker/static/js/main.0f3a108d.js",
     "index.html": "/InvestmentTracker/index.html",
-    "main.5656259d.css.map": "/InvestmentTracker/static/css/main.5656259d.css.map",
+    "main.cb869c87.css.map": "/InvestmentTracker/static/css/main.cb869c87.css.map",
     "main.0f3a108d.js.map": "/InvestmentTracker/static/js/main.0f3a108d.js.map"
   },
   "entrypoints": [
-    "static/css/main.5656259d.css",
+    "static/css/main.cb869c87.css",
     "static/js/main.0f3a108d.js"
   ]
 }
