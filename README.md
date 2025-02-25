@@ -71,12 +71,3 @@ Screenshots showcasing the application are available in the `preview` folder.
 - **Hosting**: GitHub Pages
 
 ---
-
-## 📧 **Contact**
-
-If you have any questions or suggestions for improving the application, feel free to open an **Issue** on GitHub.
-
-📍 **Author**: Andrew Dul  
-🚀 **Repository**: [InvestmentTracker Repo](https://github.com/AndrewDul/InvestmentTracker)
-
----
